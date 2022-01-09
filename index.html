@@ -9,67 +9,103 @@
         body {
             width: 100%;
             height: 100%;
-            margin: 0;
             padding: 0;
+            margin: 0;
+            background-color: black;
         }
-        
+
         nav {
-            background-color: rgb(128, 128, 128);
-            padding: 10px;
+            width: 100%;
+            height: 100px;
             
+            /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); */
+            background-image: linear-gradient(to bottom, rgba(155, 155, 155, 0.75), rgba(155, 155, 155, 0));
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: row;
         }
 
-        nav img {
-            width: 50px;
-            height: 50px;
-            border-radius: 10px;
-        }
-
-
-        nav ul {
-            margin: 0;
-            padding: 0;
+        #a1 {
             
+            width: 30%;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
         }
 
-        nav ul li {
+        #a2 {
+            
+            width: 40%;
+            height: 90px;
+        }
+
+        #a2 ul {
+            list-style-type: none;
+            display: flex;
             margin: 0;
             padding: 0;
-            list-style-type: none;
-            float: left;
+            justify-content: center;
+            align-items: center;
+            height: 90px;
         }
 
-        nav ul li a {
-            display: block;
-            width: 140px;
-            padding: 5px;
-            color: rgb(187, 187, 187);
-            text-align: center;
-            text-decoration: none;
-            border-radius: 10px;
-            margin: 3px;
+        #a2 ul li {
+            margin: 0 10px 0 10px;
         }
 
-        nav ul li a:hover {
-            background-color: rgb(100, 100, 100);
+        #a2 ul li a {
+            font-family: Bahnschrift;
             color: white;
+                /* color: black; */
+            text-decoration: none;
+        }
+
+        #a2 ul li a:hover {
+            color:gainsboro;
+        }
+
+        #a1 img {
+            border-radius: 20px;
+        }
+
+        #a1 a {
+            margin: 10px;
+            font-family: Bahnschrift;
+            color: white;
+            /* color: black; */
+            font-weight: bolder;
+            font-size: 20px;
+        }
+
+        #b1 {
+            text-decoration: none;
+            font-size: 80px;
+        }
+
+        #b1:hover {
+            color: gainsboro;
         }
 
     </style>
 </head>
 <body>
     <nav>
-        
-        <img src="./icon.png">
-        <ul>
-            <li><a>Item 1</a></li>
-            <li><a>Item 2</a></li>
-            <li><a>Item 3</a></li>
-        </ul>
-        
+        <div id="a1">
+            <img src="/gfx/logo.jpg" style="width: 75px; height: 75px;">
+            <a>Hello World!</a>
+        </div>
+        <div id="a2">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">PRODUCTS</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+        <div id="a1">
+            <a href="#" id="b1">☀/☾</a>
+        </div>
     </nav>
 </body>
 </html>
