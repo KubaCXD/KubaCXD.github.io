@@ -151,6 +151,10 @@
             cursor: pointer;
         }
 
+        .menuBtn {
+            display: none;
+        }
+
         @media screen and (max-width: 720px) {
         
             .prolist {
@@ -167,25 +171,79 @@
 
             nav {
                 flex-direction: column;
+                /* height: 400px; */
             }
 
             .a1 {
                 width: 100%;
+                
             }
 
             .a1 img {
                 width: 10%;
             }
-        
+            
+            .a2 {
+                padding-top: 25px;
+                width: 100%;
+            }
+
+            .a2 ul li {
+                padding: 10px;
+
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 15px;
+
+                
+                display: none;
+                /* display:flex; */
+            }
+
+            .a2 ul li a {
+                font-size: 25px;
+            }
+
+            .b1 {
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 15px;
+
+                display: none;
+            }
+
+            .menuBtn {
+                width: 10%;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .menuBtn img {
+                width: 60%;
+                border-radius: 0;
+                cursor: pointer;
+            }
+
+            #navLogo a {
+                display: none;
+            }
+
+            #navLogo {
+                justify-content: left;
+                padding-left: 1%;
+            }
         }
 
     </style>
 </head>
 <body class="themeBG">
     <nav id="navbar">
-        <div class="a1">
+        <div class="a1" id="navLogo">
             <img src="gfx/logo.jpg">
             <a>Hello World!</a>
+            <div class="menuBtn">
+                <img src="gfx/list.png">
+            </div>
         </div>
         <div class="a2">
             <ul>
