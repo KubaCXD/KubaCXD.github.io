@@ -15,6 +15,7 @@
         }
 
         nav {
+            position: fixed;
             width: 100%;
             height: 100px;
             
@@ -24,9 +25,9 @@
             flex-direction: row;
         }
 
-        #a1 {
+        .a1 {
             
-            width: 30%;
+            width: 25%;
             height: 90px;
             display: flex;
             justify-content: center;
@@ -34,15 +35,16 @@
             flex-direction: row;
         }
 
-        #a2 {
+        .a2 {
             
-            width: 40%;
+            width: 50%;
             height: 90px;
         }
 
-        #a2 ul {
+        .a2 ul {
             list-style-type: none;
             display: flex;
+            flex-direction: row;
             margin: 0;
             padding: 0;
             justify-content: center;
@@ -50,26 +52,27 @@
             height: 90px;
         }
 
-        #a2 ul li {
+        .a2 ul li {
             margin: 0 10px 0 10px;
         }
 
-        #a2 ul li a {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        .a2 ul li a {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             color: white;
                 /* color: black; */
             text-decoration: none;
         }
 
-        #a2 ul li a:hover {
+        .a2 ul li a:hover {
             color:gainsboro;
         }
 
-        #a1 img {
+        .a1 img {
             border-radius: 20px;
+            width: 23%;
         }
 
-        #a1 a {
+        .a1 a {
             margin: 10px;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             color: white;
@@ -78,34 +81,261 @@
             font-size: 20px;
         }
 
-        #b1 {
+        .b1 {
             text-decoration: none;
             font-size: 80px;
         }
 
-        #b1:hover {
+        .b1:hover {
             color: gainsboro;
+        }
+
+        .prolist {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 90%;
+            padding: 0 5% 0 5%;
+        }
+
+        .prolist li {
+            display: flex;
+            width: 50%;
+            flex-direction: row;
+            padding: 2% 0 2% 0;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .prolist li div {
+            width: 50%;
+        }
+
+        section {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            padding: 3% 0 3% 0;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section div {
+            width: 25%;
+        }
+
+        .title {
+            display: flex;
+            justify-content: center;
+            padding-top: 100px;
+            align-items: center;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            flex-direction: column;
+        }
+
+        .title h1 {
+            color: white;
+            font-size: 75px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .title p {
+            color: white;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #themeBtn {
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 720px) {
+        
+            .prolist {
+                flex-direction: column;
+            }
+
+            .prolist li {
+                width: 90%;
+            }
+
+            .a2 ul {
+                flex-direction: column;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            .a1 {
+                width: 100%;
+            }
+
+            .a1 img {
+                width: 10%;
+            }
+        
         }
 
     </style>
 </head>
-<body>
-    <nav>
-        <div id="a1">
-            <img src="/gfx/logo.jpg" style="width: 75px; height: 75px;">
+<body class="themeBG">
+    <nav id="navbar">
+        <div class="a1">
+            <img src="gfx/logo.jpg">
             <a>Hello World!</a>
         </div>
-        <div id="a2">
+        <div class="a2">
             <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">PRODUCTS</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <!-- <li><a href="#">HOME</a></li> -->
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#products">PRODUCTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </div>
-        <div id="a1">
-            <a href="#" id="b1">☀/☾</a>
+        <div class="a1">
+            <a class="b1" id="themeBtn" onclick="changeTheme()">☼/☾</a>
         </div>
     </nav>
+    <div class="title" id="about">
+        <h1 class="themeText">ABOUT US</h1>
+        <section style="flex-direction: column; padding: 0;">
+            <div class="themeDownBorder" style="width: 60%; height: 50%; border-bottom: 1px solid white;">
+                <p class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: center;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quasi reprehenderit repudiandae similique class nulla ipsam ipsum, incclassunt earum quclassem in dignissimos minus sit tempora vel. Magnam odit tenetur tempore!</p>
+            </div>
+            <img src="gfx/placeholder.png" style="width: 50%; margin: 20px 0 20px 0; border-radius: 10px;">
+        </section>
+    </div>
+    <div class="title" id="products">
+        <h1 class="themeText">PRODUCTS</h1>
+    </div>
+    <ul class="prolist">
+        <li>
+            <img src="gfx/thinkpad.png" style="width: 40%;">
+            <div>
+                <h2 class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Thinkpad X240</h2>
+                <p class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quasi reprehenderit repudiandae similique class nulla ipsam ipsum, incclassunt earum quclassem in dignissimos minus sit tempora vel. Magnam odit tenetur tempore!</p>
+                <a class="themeText" style="color:white; font-size: 40px; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">599,99zł</a>
+            </div>
+        </li>
+        <li>
+            <img src="gfx/poco.png" style="width: 40%;">
+            <div>
+                <h2 class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">POCO X3 Pro</h2>
+                <p class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quasi reprehenderit repudiandae similique class nulla ipsam ipsum, incclassunt earum quclassem in dignissimos minus sit tempora vel. Magnam odit tenetur tempore!</p>
+                <a class="themeText" style="color:white; font-size: 40px; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">999,99zł</a>
+            </div>
+        </li>
+        <li>
+            <img src="gfx/poco.png" style="width: 40%;">
+            <div>
+                <h2 class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">POCO X3 Pro</h2>
+                <p class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quasi reprehenderit repudiandae similique class nulla ipsam ipsum, incclassunt earum quclassem in dignissimos minus sit tempora vel. Magnam odit tenetur tempore!</p>
+                <a class="themeText" style="color:white; font-size: 40px; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">999,99zł</a>
+            </div>
+        </li>
+        <li>
+            <img src="gfx/poco.png" style="width: 40%;">
+            <div>
+                <h2 class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">POCO X3 Pro</h2>
+                <p class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quasi reprehenderit repudiandae similique class nulla ipsam ipsum, incclassunt earum quclassem in dignissimos minus sit tempora vel. Magnam odit tenetur tempore!</p>
+                <a class="themeText" style="color:white; font-size: 40px; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">999,99zł</a>
+            </div>
+        </li>
+        <li>
+            <img src="gfx/poco.png" style="width: 40%;">
+            <div>
+                <h2 class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">POCO X3 Pro</h2>
+                <p class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quasi reprehenderit repudiandae similique class nulla ipsam ipsum, incclassunt earum quclassem in dignissimos minus sit tempora vel. Magnam odit tenetur tempore!</p>
+                <a class="themeText" style="color:white; font-size: 40px; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">999,99zł</a>
+            </div>
+        </li>
+    </ul>
+    <!-- <section>
+        <img src="gfx/thinkpad.png" style="width: 25%;">
+        <div>
+            <h2 style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Thinkpad X240</h2>
+            <p style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quasi reprehenderit repudiandae similique class nulla ipsam ipsum, incclassunt earum quclassem in dignissimos minus sit tempora vel. Magnam odit tenetur tempore!</p>
+            <a style="color:white; font-size: 40px; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">599,99zł</a>
+        </div>
+    </section>
+    <section>
+        <img src="gfx/poco.png" style="width: 25%;">
+        <div>
+            <h2 style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">POCO X3 Pro</h2>
+            <p style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quasi reprehenderit repudiandae similique class nulla ipsam ipsum, incclassunt earum quclassem in dignissimos minus sit tempora vel. Magnam odit tenetur tempore!</p>
+            <a style="color:white; font-size: 40px; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">999,99zł</a>
+        </div>
+    </section> -->
+    <div class="title" id="contact">
+        <h1 class="themeText">CONTACT</h1>
+        <section style="flex-direction: column; padding: 0;">
+            <div class="themeUpBorder" style="width: 60%; height: 50%; border-top: 1px solid white;">
+                <p class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: center;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quasi reprehenderit repudiandae similique class nulla ipsam ipsum, incclassunt earum quclassem in dignissimos minus sit tempora vel. Magnam odit tenetur tempore!</p>
+            </div>
+            <img src="gfx/placeholder.png" style="width: 50%; margin: 20px 0 20px 0; border-radius: 10px;">
+        </section>
+    </div>
+    <!-- <img src="gfx/logo.jpg" style="wclassth: 1500px;"> -->
+    <script>
+        var themeBackground = document.querySelectorAll(".themeBG");
+        var themeText = document.querySelectorAll(".themeText");
+        var themeUpBorder = document.querySelectorAll(".themeUpBorder");
+        var themeDownBorder = document.querySelectorAll(".themeDownBorder");
+
+        const navbar = document.querySelector("#navbar");
+
+        var currentColor = 0; //0 - black, 1 - white
+
+        // const themeBtn = document.querySelector("#chngBtn");
+
+        function changeTheme() {
+            if ( currentColor == 0 ) {
+                for ( i = 0; i < themeBackground.length; i++) {
+                    themeBackground[i].style.backgroundColor = "white";
+                }
+                for ( i = 0; i < themeText.length; i++) {
+                    themeText[i].style.color = "black";
+                }
+
+                for ( i = 0; i < themeUpBorder.length; i++) {
+                    themeUpBorder[i].style.borderTop = "black 1px solid";
+                }
+                for ( i = 0; i < themeDownBorder.length; i++) {
+                    themeDownBorder[i].style.borderBottom = "black 1px solid";
+                }
+
+                navbar.style.backgroundImage = "linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))";
+
+                currentColor = 1;
+
+            } else if ( currentColor == 1 ) {
+                for ( i = 0; i < themeBackground.length; i++) {
+                    themeBackground[i].style.backgroundColor = "black";
+                }
+                for ( i = 0; i < themeText.length; i++) {
+                    themeText[i].style.color = "white";
+                }
+
+                for ( i = 0; i < themeUpBorder.length; i++) {
+                    themeUpBorder[i].style.borderTop = "white 1px solid";
+                }
+                for ( i = 0; i < themeDownBorder.length; i++) {
+                    themeDownBorder[i].style.borderBottom = "white 1px solid";
+                }
+
+                navbar.style.backgroundImage = "linear-gradient(to bottom, rgba(155, 155, 155, 0.75), rgba(155, 155, 155, 0))";
+
+                currentColor = 0;
+            }
+            console.log(currentColor);
+        }
+
+        // themeBtn.addEventListener("click", function(){
+            
+        // })
+    </script>
 </body>
 </html>
