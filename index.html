@@ -5,262 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-            background-color: black;
-        }
-
-        nav {
-            position: fixed;
-            width: 100%;
-            height: 100px;
-            
-            /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); */
-            background-image: linear-gradient(to bottom, rgba(155, 155, 155, 0.75), rgba(155, 155, 155, 0));
-            display: flex;
-            flex-direction: row;
-        }
-
-        .a1 {
-            
-            width: 25%;
-            height: 90px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-        }
-
-        .a2 {
-            
-            width: 50%;
-            height: 90px;
-        }
-
-        .a2 ul {
-            list-style-type: none;
-            display: flex;
-            flex-direction: row;
-            margin: 0;
-            padding: 0;
-            justify-content: center;
-            align-items: center;
-            height: 90px;
-        }
-
-        .a2 ul li {
-            margin: 0 10px 0 10px;
-        }
-
-        .a2 ul li a {
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            color: white;
-                /* color: black; */
-            text-decoration: none;
-        }
-
-        .a2 ul li a:hover {
-            color:gainsboro;
-        }
-
-        .a1 img {
-            border-radius: 20px;
-            width: 23%;
-        }
-
-        .a1 a {
-            margin: 10px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            color: white;
-            /* color: black; */
-            font-weight: bolder;
-            font-size: 20px;
-        }
-
-        .b1 {
-            text-decoration: none;
-            font-size: 80px;
-        }
-
-        .b1:hover {
-            color: gainsboro;
-        }
-
-        .prolist {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            width: 90%;
-            padding: 0 5% 0 5%;
-        }
-
-        .prolist li {
-            display: flex;
-            width: 50%;
-            flex-direction: row;
-            padding: 2% 0 2% 0;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .prolist li div {
-            width: 50%;
-        }
-
-        section {
-            display: flex;
-            width: 100%;
-            flex-direction: row;
-            padding: 3% 0 3% 0;
-            justify-content: center;
-            align-items: center;
-        }
-
-        section div {
-            width: 25%;
-        }
-
-        .title {
-            display: flex;
-            justify-content: center;
-            padding-top: 100px;
-            align-items: center;
-            padding-bottom: 0;
-            margin-bottom: 0;
-            flex-direction: column;
-        }
-
-        .title h1 {
-            color: white;
-            font-size: 75px;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            margin: 5px;
-            padding: 5px;
-        }
-
-        .title p {
-            color: white;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-
-        #themeBtn {
-            cursor: pointer;
-        }
-
-        .menuBtn {
-            display: none;
-        }
-
-        @media screen and (max-width: 720px) {
-        
-            .prolist {
-                flex-direction: column;
-            }
-
-            .prolist li {
-                width: 90%;
-            }
-
-            .a2 ul {
-                flex-direction: column;
-            }
-
-            nav {
-                flex-direction: column;
-                /* height: 400px; */
-            }
-
-            .a1 {
-                width: 100%;
-                
-            }
-
-            .a1 img {
-                width: 10%;
-            }
-            
-            .a2 {
-                padding-top: 25px;
-                width: 100%;
-            }
-
-            .a2 ul li {
-                padding: 10px;
-
-                background-color: rgba(0, 0, 0, 0.5);
-                border-radius: 15px;
-
-                
-                display: none;
-                /* display:flex; */
-            }
-
-            .a2 ul li a {
-                font-size: 25px;
-            }
-
-            .b1 {
-                background-color: rgba(0, 0, 0, 0.5);
-                border-radius: 15px;
-
-                display: none;
-            }
-
-            .menuBtn {
-                width: 10%;
-                height: 100px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .menuBtn img {
-                width: 60%;
-                border-radius: 0;
-                cursor: pointer;
-            }
-
-            #navLogo a {
-                display: none;
-            }
-
-            #navLogo {
-                justify-content: left;
-                padding-left: 1%;
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body class="themeBG">
     <nav id="navbar">
-        <div class="a1" id="navLogo">
+        <div id="navLogo">
+            <img src="gfx/list.png" style="width: 50px;" onclick="menuStateChange()" id="showList">
             <img src="gfx/logo.jpg">
             <a>Hello World!</a>
-            <div class="menuBtn">
-                <img src="gfx/list.png">
-            </div>
         </div>
-        <div class="a2">
+        <div id="navLinks">
             <ul>
-                <!-- <li><a href="#">HOME</a></li> -->
-                <li><a href="#about">ABOUT US</a></li>
-                <li><a href="#products">PRODUCTS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li class="menuItem"><a href="#about">ABOUT</a></li>
+                <li class="menuItem"><a href="#products">PRODUCTS</a></li>
+                <li class="menuItem"><a href="#contact">CONTACT</a></li>
             </ul>
         </div>
-        <div class="a1">
-            <a class="b1" id="themeBtn" onclick="changeTheme()">☼/☾</a>
-        </div>
+        <!-- <div id="navTheme">
+            <a id="themeBtn" onclick="changeTheme()">☼/☾</a>
+        </div> -->
     </nav>
     <div class="title" id="about">
-        <h1 class="themeText">ABOUT US</h1>
+        <h1 class="themeText">ABOUT</h1>
         <section style="flex-direction: column; padding: 0;">
-            <div class="themeDownBorder" style="width: 60%; height: 50%; border-bottom: 1px solid white;">
+            <div class="themeBottomBorder" style="width: 60%; height: 50%; border-bottom: 1px solid white;">
                 <p class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: center;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quasi reprehenderit repudiandae similique class nulla ipsam ipsum, incclassunt earum quclassem in dignissimos minus sit tempora vel. Magnam odit tenetur tempore!</p>
             </div>
             <img src="gfx/placeholder.png" style="width: 50%; margin: 20px 0 20px 0; border-radius: 10px;">
@@ -311,43 +79,26 @@
             </div>
         </li>
     </ul>
-    <!-- <section>
-        <img src="gfx/thinkpad.png" style="width: 25%;">
-        <div>
-            <h2 style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Thinkpad X240</h2>
-            <p style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quasi reprehenderit repudiandae similique class nulla ipsam ipsum, incclassunt earum quclassem in dignissimos minus sit tempora vel. Magnam odit tenetur tempore!</p>
-            <a style="color:white; font-size: 40px; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">599,99zł</a>
-        </div>
-    </section>
-    <section>
-        <img src="gfx/poco.png" style="width: 25%;">
-        <div>
-            <h2 style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">POCO X3 Pro</h2>
-            <p style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quasi reprehenderit repudiandae similique class nulla ipsam ipsum, incclassunt earum quclassem in dignissimos minus sit tempora vel. Magnam odit tenetur tempore!</p>
-            <a style="color:white; font-size: 40px; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">999,99zł</a>
-        </div>
-    </section> -->
     <div class="title" id="contact">
         <h1 class="themeText">CONTACT</h1>
         <section style="flex-direction: column; padding: 0;">
-            <div class="themeUpBorder" style="width: 60%; height: 50%; border-top: 1px solid white;">
+            <div class="themeBottomBorder" style="width: 60%; height: 50%; border-bottom: 1px solid white;">
                 <p class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: center;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quasi reprehenderit repudiandae similique class nulla ipsam ipsum, incclassunt earum quclassem in dignissimos minus sit tempora vel. Magnam odit tenetur tempore!</p>
             </div>
             <img src="gfx/placeholder.png" style="width: 50%; margin: 20px 0 20px 0; border-radius: 10px;">
         </section>
     </div>
-    <!-- <img src="gfx/logo.jpg" style="wclassth: 1500px;"> -->
     <script>
         var themeBackground = document.querySelectorAll(".themeBG");
         var themeText = document.querySelectorAll(".themeText");
-        var themeUpBorder = document.querySelectorAll(".themeUpBorder");
-        var themeDownBorder = document.querySelectorAll(".themeDownBorder");
+        var themeTopBorder = document.querySelectorAll(".themeTopBorder");
+        var themeBottomBorder = document.querySelectorAll(".themeBottomBorder");
 
+        var menuItems = document.querySelectorAll(".menuItem");
+        const menuItem = document.querySelector("#navTheme");
         const navbar = document.querySelector("#navbar");
 
         var currentColor = 0; //0 - black, 1 - white
-
-        // const themeBtn = document.querySelector("#chngBtn");
 
         function changeTheme() {
             if ( currentColor == 0 ) {
@@ -358,11 +109,11 @@
                     themeText[i].style.color = "black";
                 }
 
-                for ( i = 0; i < themeUpBorder.length; i++) {
-                    themeUpBorder[i].style.borderTop = "black 1px solid";
+                for ( i = 0; i < themeTopBorder.length; i++) {
+                    themeTopBorder[i].style.borderTop = "black 1px solid";
                 }
-                for ( i = 0; i < themeDownBorder.length; i++) {
-                    themeDownBorder[i].style.borderBottom = "black 1px solid";
+                for ( i = 0; i < themeBottomBorder.length; i++) {
+                    themeBottomBorder[i].style.borderBottom = "black 1px solid";
                 }
 
                 navbar.style.backgroundImage = "linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))";
@@ -377,11 +128,11 @@
                     themeText[i].style.color = "white";
                 }
 
-                for ( i = 0; i < themeUpBorder.length; i++) {
-                    themeUpBorder[i].style.borderTop = "white 1px solid";
+                for ( i = 0; i < themeTopBorder.length; i++) {
+                    themeTopBorder[i].style.borderTop = "white 1px solid";
                 }
-                for ( i = 0; i < themeDownBorder.length; i++) {
-                    themeDownBorder[i].style.borderBottom = "white 1px solid";
+                for ( i = 0; i < themeBottomBorder.length; i++) {
+                    themeBottomBorder[i].style.borderBottom = "white 1px solid";
                 }
 
                 navbar.style.backgroundImage = "linear-gradient(to bottom, rgba(155, 155, 155, 0.75), rgba(155, 155, 155, 0))";
@@ -391,9 +142,65 @@
             console.log(currentColor);
         }
 
-        // themeBtn.addEventListener("click", function(){
-            
-        // })
+        var viewport_width = window.innerWidth;
+        var isMenuActivated = 0;
+
+        window.addEventListener("resize", function() {
+            viewport_width = window.innerWidth;
+            console.log(viewport_width);
+            if(viewport_width > 720)
+            {
+                for(var i = 0; i < menuItems.length; i++)
+                {
+                    menuItems[i].style.display = "flex";
+                }
+                // menuItem.style.display = "flex";
+
+                navbar.style.height = "100px";
+            }
+            if(viewport_width < 720)
+            {
+                for(var i = 0; i < menuItems.length; i++)
+                {
+                    menuItems[i].style.display = "none";
+                }
+                // menuItem.style.display = "none";
+
+                navbar.style.height = "87px";
+
+                isMenuActivated = 0;
+
+            }
+        })
+
+        function menuStateChange() {
+            if(isMenuActivated == 1)
+            {
+                for(var i = 0; i < menuItems.length; i++)
+                {
+                    menuItems[i].style.display = "none";
+                }
+                // menuItem.style.display = "none";
+
+                navbar.style.height = "87px";
+
+                isMenuActivated = 0;
+            } else if (isMenuActivated == 0)
+            {
+                for(var i = 0; i < menuItems.length; i++)
+                {
+                    menuItems[i].style.display = "flex";
+                }
+                // menuItem.style.display = "flex";
+
+                navbar.style.height = "420px";
+
+                isMenuActivated = 1;
+            }
+
+            console.log(isMenuActivated);
+        }
+
     </script>
 </body>
 </html>
