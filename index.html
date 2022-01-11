@@ -175,30 +175,33 @@
         })
 
         function menuStateChange() {
-            if(isMenuActivated == 1)
+            if(viewport_width <= 720)
             {
-                for(var i = 0; i < menuItems.length; i++)
+                if(isMenuActivated == 1)
                 {
-                    menuItems[i].style.display = "none";
-                }
-                // menuItem.style.display = "none";
+                    for(var i = 0; i < menuItems.length; i++)
+                    {
+                        menuItems[i].style.display = "none";
+                    }
+                    // menuItem.style.display = "none";
 
-                navbar.style.height = "87px";
+                    navbar.style.height = "87px";
 
-                isMenuActivated = 0;
-            } else if (isMenuActivated == 0)
-            {
-                for(var i = 0; i < menuItems.length; i++)
+                    isMenuActivated = 0;
+                } else if (isMenuActivated == 0)
                 {
-                    menuItems[i].style.display = "flex";
+                    for(var i = 0; i < menuItems.length; i++)
+                    {
+                        menuItems[i].style.display = "flex";
+                    }
+                    // menuItem.style.display = "flex";
+
+                    navbar.style.height = "420px";
+
+                    isMenuActivated = 1;
                 }
-                // menuItem.style.display = "flex";
-
-                navbar.style.height = "420px";
-
-                isMenuActivated = 1;
             }
-
+            
             console.log(isMenuActivated);
         }
 
