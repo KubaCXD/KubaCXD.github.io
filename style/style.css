@@ -175,6 +175,10 @@ section div {
     display: none;
 }
 
+.prolist li img {
+    width: 40%;
+}
+
 
 @media screen and (max-width: 720px) {
 
@@ -320,5 +324,9 @@ section div {
     .prolist li div {
         width: 80%;
         text-align: center;
+    }
+
+    .prolist li img {
+        width: 60%;
     }
 }
