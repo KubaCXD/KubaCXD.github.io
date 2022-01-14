@@ -167,6 +167,7 @@ section div {
 }
 
 #mobileThemeBtn {
+    cursor: pointer;
     display: none;
 }
 
