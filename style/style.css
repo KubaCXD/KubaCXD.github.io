@@ -166,6 +166,10 @@ section div {
     display: none;
 }
 
+#mobileThemeBtn {
+    display: none;
+}
+
 
 @media screen and (max-width: 720px) {
 
@@ -294,5 +298,10 @@ section div {
         display: block;
         border-radius:x;
         cursor: pointer;
+    }
+
+    #mobileThemeBtn {
+        cursor: pointer;
+        display: block;
     }
 }
