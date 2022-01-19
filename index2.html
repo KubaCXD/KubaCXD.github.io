@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style2.css">
+    <link rel="icon" href="gfx/icon.ico" type="image/icon type">
+</head>
+<body class="themeBG">
+    <nav id="navbar">
+        <div id="navLogo">
+            <img src="gfx/list.png" style="width: 50px;" onclick="menuStateChange()" id="showList">
+            <img src="gfx/hobbit_logo.png">
+            <!-- <a>Hello World!</a> -->
+        </div>
+        <div id="navLinks">
+            <ul>
+                <li class="menuItem"><a href="#about" onclick="menuStateChange()">O NAS</a></li>
+                <li class="menuItem"><a href="#forYou" onclick="menuStateChange()">GRA DLA CIEBIE</a></li>
+                <li class="menuItem"><a href="#products" onclick="menuStateChange()">CO U NAS KUPISZ</a></li>
+                <li class="menuItem"><a href="#contact" onclick="menuStateChange()">KONTAKT</a></li>
+                <li class="menuItem"><a id="mobileThemeBtn" onclick="changeTheme()">☼/☾</a></li>
+            </ul>
+        </div>
+        <div id="navTheme">
+            <a id="themeBtn" onclick="changeTheme()">☼/☾</a>
+        </div>
+    </nav>
+    <div class="title" id="about">
+        <h1 class="themeText">O NAS</h1>
+        <section style="flex-direction: column; padding: 0;">
+            <div class="themeBottomBorder" style="width: 60%; height: 50%; border-bottom: 1px solid white;">
+                <p class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: center;">Jesteśmy niewielkim sklepikiem w którym mimo jego wielkości każdy coś dla siebie znajdzie, nie zależnie od tego czy szukasz gier czy sprzętu do ich odpalania.</p>
+            </div>
+            <img src="gfx/image.png" style="margin: 20px 0 20px 0; border-radius: 10px;">
+        </section>
+    </div>
+    <div class="title" id="forYou">
+        <h1 class="themeText" style="text-align: center;">GRA DLA CIEBIE</h1>
+        <p class="themeText themeBottomBorder" id="gameTitle" style="border-bottom: 1px solid white; width: 60%; text-align: center;">Hello World!</p>
+        <iframe id="gameVideo" src="index.html" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="title" id="products">
+        <h1 class="themeText" style="text-align: center;">CO U NAS KUPISZ</h1>
+    </div>
+    <ul class="prolist">
+        <li>
+            <img src="gfx/consoles/ps4s.png" >
+            <div>
+                <h2 class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">PlayStation 4 Slim</h2>
+                <p class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Odświeżona wersja konsoli PlayStation 4 która jest jednocześnie od niej lepsza zarówno jeśli chodzi o rozmiar, głośność pracy konsoli jak i cenę. </p>
+                <a class="themeText" style="color:white; font-size: 40px; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">759zł</a>
+            </div>
+        </li>
+        <li>
+            <img src="gfx/consoles/ps3s.png" >
+            <div>
+                <h2 class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">PlayStation 3 Slim</h2>
+                <p class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Konsola o dużej mocy i ładnej grafice w odświeżonej wersji która pozwala ci ograć dużą liczbę gier nie tylko z PS3 ale także wcześniejszych systemów z rodziny PlayStation.</p>
+                <a class="themeText" style="color:white; font-size: 40px; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">319zł</a>
+            </div>
+        </li>
+        <li>
+            <img src="gfx/consoles/psVITAs.png" >
+            <div>
+                <h2 class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">PlayStation Vita</h2>
+                <p class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Następca legendarnego PlayStation Portable z jeszcze lepszą grafiką i lepiej działającymi grami która jednocześnie nie zapomina o swoim poprzedniku pozwalając na ogrywanie gier również z niej jak i pierwszej konsoli PlayStation dzięki czemu będziesz mógł nadrobić sobie stare klasyki.</p>
+                <a class="themeText" style="color:white; font-size: 40px; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">340zł</a>
+            </div>
+        </li>
+        <li>
+            <img src="gfx/consoles/xONEs.png" >
+            <div>
+                <h2 class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">XBOX One S</h2>
+                <p class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Konsola która za małą cene nastawiona na zakupy tylko przez sklep XBOX pozwala ci sprawdzić co potrafią zaoferować graczą konsole z serii XBOX ONE.</p>
+                <a class="themeText" style="color:white; font-size: 40px; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">699zł</a>
+            </div>
+        </li>
+        <li>
+            <img src="gfx/consoles/x360f.png" >
+            <div>
+                <h2 class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">XBOX 360</h2>
+                <p class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Pierwsza konsola 7 generacji konsol która wprowadziła do domów rozdzielczość HD jak i dobrze dopracowaną platformę sieciową XBOX Live która umożliwiała komunikowanie się miedzy sobą jak i wygodne granie ze znajomymi przez interet.</p>
+                <a class="themeText" style="color:white; font-size: 40px; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">319zł</a>
+            </div>
+        </li>
+        <li>
+            <img src="gfx/consoles/x360s.png" >
+            <div>
+                <h2 class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">XBOX 360 S</h2>
+                <p class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Mniejsza a zarazem lepsza wersja konsoli XBOX 360 która pozwalała na rozszerzenie pojemności pamięci wewnętrznej konsoli dzięki dostępnemu osobno dyskowi dodający aż do 500gb.</p>
+                <a class="themeText" style="color:white; font-size: 40px; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">369zł</a>
+            </div>
+        </li>
+        <li>
+            <img src="gfx/consoles/3ds.png" >
+            <div>
+                <h2 class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Nintendo 3DS</h2>
+                <p class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Konsola różna od innych pozwalająca na odkrywanie gier na zupełnie inny sposób dzięki ekranowi 3D.</p>
+                <a class="themeText" style="color:white; font-size: 40px; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">450zł</a>
+            </div>
+        </li>
+        <li>
+            <img src="gfx/consoles/ds.png" >
+            <div>
+                <h2 class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Nintendo DS</h2>
+                <p class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Jedna z najlepiej sprzędających się konsol do teraz która dostała sie do rąk 154 mln osób oferująć im doskonałe gry przy których można spędzać godziny jak i pozwalająca na ogrywane gier z jego poprzednika Gameboy-a Advanced.</p>
+                <a class="themeText" style="color:white; font-size: 40px; font-weight: bold; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">210zł</a>
+            </div>
+        </li>
+    </ul>
+    <div class="title" id="contact">
+        <h1 class="themeText">KONTAKT</h1>
+        <section style="flex-direction: column; padding: 0;">
+            <div class="themeBottomBorder" style="width: 60%; height: 50%; border-bottom: 1px solid white;">
+                <p class="themeText" style="color:white; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: center;">Mail: hobbitnet@gmail.com<br>Tel: +48 600 501 500<br><br>Hetman. Dom handlowy PSS Społem<br>Hetmańska 26<br>35-045 Rzeszów<br><br>Godziny otwarcia<br>Pon- Pt: 09:00 - 20:00<br>Sobota: 10:00 - 19:00<br>Niedziela: 10:00 - 17:00</p>
+            </div>
+            <!-- <img src="gfx/placeholder.png" style="width: 50%; margin: 20px 0 20px 0; border-radius: 10px;"> -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123.0684474873841!2d21.99523483073844!3d50.02707598766816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473cfbac9952a21b%3A0x16bd7061297264c1!2sHobbit%20-%20gry%2C%20konsole!5e1!3m2!1spl!2spl!4v1642506726735!5m2!1spl!2spl" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </div>
+    <script>
+        var themeBackground = document.querySelectorAll(".themeBG");
+        var themeText = document.querySelectorAll(".themeText");
+        var themeTopBorder = document.querySelectorAll(".themeTopBorder");
+        var themeBottomBorder = document.querySelectorAll(".themeBottomBorder");
+
+        var menuItems = document.querySelectorAll(".menuItem");
+        const menuItem = document.querySelector("#navTheme");
+        const navbar = document.querySelector("#navbar");
+
+
+        var gTitle = document.querySelector("#gameTitle");
+        var gVideo = document.querySelector("#gameVideo");
+
+        const gameTitles = [
+            "Nintendo Switch<br>Super Mario Party",
+            "PlayStation 4<br>The Last of Us Part II",
+            "Nintendo Switch<br>The Legend of Zelda: Skyward Sword HD",
+            "Nintendo Switch<br>Paper Mario: The Origami King",
+            "XBOX 360<br>WRC 5",
+            "PlayStation 4<br>Farming Simulator 19",
+            "Nintendo Switch<br>Super Mario 3D All-Stars",
+            "XBOX One<br>The Crew Wild Run Edition",
+            "PlayStation 4<br>Battlefield 2042",
+            "XBOX 360<br>Forza Horizon 2",
+            "Nintendo Switch<br>Splatoon 2",
+            "PlayStation 4<br>Death Stranding Edycja Specjalna"
+        ]
+
+        const gameVideos = [
+            "https://www.youtube.com/embed/D7zTJLIYJds",
+            "https://www.youtube.com/embed/tN6cYQzra3E",
+            "https://www.youtube.com/embed/r7qozxgX4c8",
+            "https://www.youtube.com/embed/FX6DTLcWUdY",
+            "https://www.youtube.com/embed/DW4dZ4FrE1c",
+            "https://www.youtube.com/embed/SKWR8B0LlhI",
+            "https://www.youtube.com/embed/N5wSl88EO3Y",
+            "https://www.youtube.com/embed/cTk6yFIQzac",
+            "https://www.youtube.com/embed/LuXsKqwE3v8",
+            "https://www.youtube.com/embed/KSgyJqecz-4",
+            "https://www.youtube.com/embed/ylBYfndq8fU",
+            "https://www.youtube.com/embed/UcaMw4aCz4c"
+        ]        
+
+        var whitchGame = Math.floor(Math.random() * 12);
+        console.log(whitchGame);
+
+        gTitle.innerHTML = gameTitles[whitchGame];
+        gVideo.src = gameVideos[whitchGame];
+
+
+        
+
+        var currentColor = 0; //0 - black, 1 - white
+
+        function changeTheme() {
+            if ( currentColor == 0 ) {
+                for ( i = 0; i < themeBackground.length; i++) {
+                    themeBackground[i].style.backgroundColor = "white";
+                }
+                for ( i = 0; i < themeText.length; i++) {
+                    themeText[i].style.color = "black";
+                }
+
+                for ( i = 0; i < themeTopBorder.length; i++) {
+                    themeTopBorder[i].style.borderTop = "black 1px solid";
+                }
+                for ( i = 0; i < themeBottomBorder.length; i++) {
+                    themeBottomBorder[i].style.borderBottom = "black 1px solid";
+                }
+
+                navbar.style.backgroundImage = "linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))";
+
+                currentColor = 1;
+
+            } else if ( currentColor == 1 ) {
+                for ( i = 0; i < themeBackground.length; i++) {
+                    themeBackground[i].style.backgroundColor = "black";
+                }
+                for ( i = 0; i < themeText.length; i++) {
+                    themeText[i].style.color = "white";
+                }
+
+                for ( i = 0; i < themeTopBorder.length; i++) {
+                    themeTopBorder[i].style.borderTop = "white 1px solid";
+                }
+                for ( i = 0; i < themeBottomBorder.length; i++) {
+                    themeBottomBorder[i].style.borderBottom = "white 1px solid";
+                }
+
+                navbar.style.backgroundImage = "linear-gradient(to bottom, rgba(150, 150, 150, 0.90), rgba(0, 0, 0, 0.70), rgba(155, 155, 155, 0.20))";
+
+                currentColor = 0;
+            }
+            console.log(currentColor);
+        }
+
+        var viewport_width = window.innerWidth;
+        var isMenuActivated = 0;
+
+        window.addEventListener("resize", function() {
+            viewport_width = window.innerWidth;
+            console.log(viewport_width);
+            if(viewport_width > 720)
+            {
+                for(var i = 0; i < menuItems.length; i++)
+                {
+                    menuItems[i].style.display = "flex";
+                }
+                // menuItem.style.display = "flex";
+
+                navbar.style.height = "100px";
+            }
+            if(viewport_width < 720)
+            {
+                for(var i = 0; i < menuItems.length; i++)
+                {
+                    menuItems[i].style.display = "none";
+                }
+                // menuItem.style.display = "none";
+
+                navbar.style.height = "87px";
+
+                isMenuActivated = 0;
+
+            }
+        })
+
+        function menuStateChange() {
+            if(viewport_width <= 720)
+            {
+                if(isMenuActivated == 1)
+                {
+                    for(var i = 0; i < menuItems.length; i++)
+                    {
+                        menuItems[i].style.display = "none";
+                    }
+                    // menuItem.style.display = "none";
+
+                    navbar.style.height = "87px";
+
+                    isMenuActivated = 0;
+                } else if (isMenuActivated == 0)
+                {
+                    for(var i = 0; i < menuItems.length; i++)
+                    {
+                        menuItems[i].style.display = "flex";
+                    }
+                    // menuItem.style.display = "flex";
+
+                    navbar.style.height = "420px";
+
+                    isMenuActivated = 1;
+                }
+            }
+            
+            console.log(isMenuActivated);
+        }
+
+    </script>
+</body>
+</html>
